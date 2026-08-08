@@ -24,7 +24,7 @@ npm run dev
 npm run build
 ```
 
-## 📦 Deploy
+## 📦 Deploy Status
 
-- **GitHub Pages**: Automatizado via `.github/workflows/deploy.yml`
-- **Netlify**: Configurado via `netlify.toml` e `.github/workflows/netlify.yml`
+- **GitHub Pages**: Configurado via GitHub Actions (`.github/workflows/deploy.yml`)
+- **Netlify**: Configurado via `netlify.toml`
