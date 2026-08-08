@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    
+    --bg-dark: #0f0f0f;
+    --accent-gold: #bf9d5a;
+    --text-cream: #ece1d6;
+    --text-dark: #0f0f0f;
+  }
+
+  html {
+    font-family: var(--font-body);
+    scroll-behavior: auto;
+    background-color: #ece1d6;
+    color: #0f0f0f;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+
+  .font-serif-luxury {
+    font-family: var(--font-serif);
+  }
+}
+
+.bg-fixed-geometric-sections {
+  position: relative;
+  background-image: url('/assets/bg-image.jpg');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sensei-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  padding: 0.375rem 0.375rem 0.375rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.sensei-btn-black {
+  background-color: #0f0f0f;
+  color: #ece1d6;
+  border: 1px solid #0f0f0f;
+}
+
+.sensei-btn-black:hover {
+  background-color: #1f1f1f;
+  box-shadow: 0 10px 25px -5px rgba(15, 15, 15, 0.3);
+  transform: translateY(-2deg);
+}
+
+.sensei-btn-gold {
+  background-color: #bf9d5a;
+  color: #0f0f0f;
+  border: 1px solid #bf9d5a;
+}
+
+.sensei-btn-gold:hover {
+  background-color: #d4b16a;
+  box-shadow: 0 10px 25px -5px rgba(191, 157, 90, 0.35);
+  transform: translateY(-2deg);
+}
+
+.btn-arrow-circle {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.sensei-btn-black .btn-arrow-circle {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.sensei-btn:hover .btn-arrow-circle {
+  transform: translateX(3px) translateY(-1px);
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee-scroll 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.corner-frame {
+  position: relative;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(191, 157, 90, 0.45);
+  border-radius: 0px;
+}
+
+.corner-frame::before, .corner-frame::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: #bf9d5a;
+  pointer-events: none;
+}
+
+.corner-frame::before {
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.corner-frame::after {
+  bottom: 8px;
+  right: 8px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
