@@ -1,0 +1,6 @@
+# Robots.txt para Augusto & Almeida - Sociedade de Advogados
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.augusto-almeida.adv.br/sitemap.xml
